@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaThLarge, FaCode, FaChartBar, FaTwitter, FaWhatsapp, FaFacebookF, FaTiktok } from 'react-icons/fa';
-import '../assets/landing.css';
+import '../assets/Landing.css';
 
 function Landing() {
   return (
