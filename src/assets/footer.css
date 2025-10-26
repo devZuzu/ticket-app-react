@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid #dee2e6;
+  font-size: 0.875rem;
+  color: var(--gray);
+}
+.footer .logo {
+  color: var(--primary);
+  font-weight: 700;
+}
+.footer .links a {
+  margin: 0 1rem;
+  color: var(--gray);
+  text-decoration: none;
+}
+.footer .social {
+  display: flex;
+  gap: 1rem;
+}
+.footer .social svg {
+  color: var(--gray);
+  font-size: 1.25rem;
+  cursor: pointer;
+}

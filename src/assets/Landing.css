@@ -1,0 +1,240 @@
+:root {
+  --primary: #007bff;
+  --gray: #6c757d;
+  --radius-md: 12px;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  position: relative;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  position: relative;
+  background: linear-gradient(var(--primary), #0056b3);
+  color: #fff;
+  padding: 8rem 1rem 12rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.hero button {
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative; /* Ensure buttons are above wave */
+  z-index: 2; /* Above the wave layer */
+}
+
+.hero button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero .login {
+  background: #fff;
+  color: var(--primary);
+}
+
+.hero .get-started {
+  background: #20c997;
+  color: #fff;
+}
+
+.login-link, .get-started-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Floating circle decorations */
+.hero .decor-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero .decor-circle-large {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+}
+
+.hero .decor-circle-small {
+  top: 10%;
+  right: 10%;
+  width: 100px;
+  height: 100px;
+  opacity: 0.2;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero .decor-circle-large,
+.hero .decor-circle-small {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Wave animation */
+@keyframes waveMove {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background: url('ticket-app-react/public/assets/wave.svg.svg') no-repeat bottom center;
+  background-size: cover;
+  animation: waveMove 15s linear infinite;
+  z-index: 1; 
+}
+
+/* ========== FEATURES SECTION ========== */
+.features {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  text-align: center;
+  background: #f8f9fa;
+}
+
+/* Section heading */
+.features h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.features > p {
+  color: var(--gray);
+  font-size: 1.125rem;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Box grid */
+.features .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+/* feature box */
+.features .box {
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  padding: 2.5rem 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features .box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon styling */
+.features .icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+/* Box headings */
+.features .box h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #212529;
+}
+
+/* Box paragraph */
+.features .box p {
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 1.6;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-top: 1px solid #dee2e6;
+  font-size: 0.875rem;
+  color: var(--gray);
+}
+
+.footer .logo {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.footer .links a {
+  margin: 0 1rem;
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.footer .social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer .social a {
+  color: var(--primary);
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social a:hover {
+  color: #20c997;
+}

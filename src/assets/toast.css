@@ -1,0 +1,23 @@
+.toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-md);
+  color: #fff;
+  box-shadow: var(--shadow);
+  font-size: 1rem;
+  z-index: 1000;
+}
+.toast.success {
+  background: var(--success);
+}
+.toast.error {
+  background: var(--error);
+}
+.toast.info {
+  background: var(--primary);
+}
+.toast.warning {
+  background: var(--warning);
+}

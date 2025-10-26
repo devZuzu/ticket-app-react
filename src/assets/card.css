@@ -1,0 +1,32 @@
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  position: relative;
+  width: 100%;
+}
+.card-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--gray);
+  font-size: 1.5rem;
+}
+.card-title {
+  font-size: 0.875rem;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+.card-content {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.card.open .card-content { color: var(--success); }
+.card.resolved .card-content { color: var(--closed); }
+
+@media (max-width: 768px) {
+  .card { padding: 1rem; }
+  .card-content { font-size: 2rem; }
+}

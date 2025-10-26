@@ -1,0 +1,33 @@
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.nav .logo {
+  color: var(--primary);
+  font-weight: 700;
+  margin-right: auto;
+}
+.nav a {
+  margin: 0 1rem;
+  color: var(--gray);
+  text-decoration: none;
+}
+.nav .active {
+  color: var(--text);
+  border-bottom: 2px solid var(--primary);
+}
+.nav .welcome {
+  color: var(--gray);
+  margin-right: 1rem;
+}
+.nav .logout {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+}

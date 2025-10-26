@@ -1,0 +1,137 @@
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.nav .logo {
+  color: var(--primary);
+  font-weight: 700;
+  margin-right: auto;
+}
+.nav a {
+  margin: 0 1rem;
+  color: var(--gray);
+  text-decoration: none;
+}
+.nav .active {
+  color: var(--text);
+  border-bottom: 2px solid var(--primary);
+}
+.nav .welcome {
+  color: var(--gray);
+  margin-right: 1rem;
+}
+.nav .logout {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: none;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.stat-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.stat-card .icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--gray);
+}
+.stat-card h4 {
+  font-size: 0.875rem;
+  color: var(--gray);
+}
+.stat-card .number {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.stat-card.open .number { 
+    color: var(--success); 
+}
+.stat-card.resolved .number { 
+    color: var(--closed); 
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.table th {
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.75rem;
+  color: var(--gray);
+  text-transform: uppercase;
+}
+.table td {
+  padding: 1rem;
+  border-top: 1px solid #dee2e6;
+}
+.tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+.tag.react { 
+    background: rgba(245,0,87,0.1); 
+    color: #f50057; 
+}
+.tag.vue { 
+    background: rgba(66,185,131,0.1); 
+    color: #42b983; 
+}
+.tag.twig { 
+    background: rgba(247,223,30,0.1); 
+    color: #f7df1e; 
+}
+.status-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.status-tag::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.status-tag.open::before { 
+    background: var(--success); 
+}
+.status-tag.in_progress::before { 
+    background: var(--warning); 
+}
+.status-tag.closed::before { 
+    background: var(--closed); 
+}
+.status-tag.open { 
+    color: var(--success); 
+}
+.status-tag.in_progress { 
+    color: var(--warning);
+}
+.status-tag.closed { 
+    color: var(--closed); 
+}
+.view-all {
+  text-align: center;
+  padding: 1rem;
+  color: var(--primary);
+}

@@ -1,0 +1,16 @@
+:root {
+  --primary: #007bff;
+  --gray: #6c757d;
+  --error: #dc3545;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  --bg: #f8f9fa;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: #333;
+}

@@ -1,0 +1,17 @@
+.auth-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+.auth-tabs button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+.auth-tabs .active {
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+}
