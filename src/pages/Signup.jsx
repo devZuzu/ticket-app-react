@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import Toast from '../components/Toast';
 import AuthTabs from '../components/AuthTabs';
 import '../assets/auth.css';
+import Nav from '../components/Nav';
 
 function Signup({ setAuth }) {
   const [username, setUsername] = useState('');
@@ -37,6 +38,7 @@ function Signup({ setAuth }) {
 
   return (
     <div className="auth-container">
+      <Nav />
       <div className="auth-card">
         <h2>Support Ticket Manager</h2>
         <p>Please signup to continue</p>

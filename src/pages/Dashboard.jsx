@@ -3,6 +3,8 @@ import { toast } from 'react-toastify';
 import useTickets from '../hooks/useTickets';
 import { FaChartBar, FaEnvelopeOpen, FaCheckCircle } from 'react-icons/fa';
 import '../assets/dashboard.css';
+import Nav from '../components/Nav';
+
 
 function Dashboard({ setAuth }) {
   const [tickets] = useTickets();
@@ -20,17 +22,26 @@ function Dashboard({ setAuth }) {
   const open = tickets.filter(t => t.status === 'open').length;
   const resolved = tickets.filter(t => t.status === 'closed').length;
   const recent = tickets.slice(-4).reverse(); 
+
   return (
+   
     <div className="container">
-      <nav className="nav">
+      <Nav />
+
+      {/* <nav className="nav">
         <div className="logo">SupportDesk</div>
         <Link to="/dashboard" className="active">Dashboard</Link>
         <Link to="/tickets">Ticket Management</Link>
         <Link to="/analytics">Analytics</Link>
         <span className="welcome">Welcome, Alex</span>
         <button className="logout" onClick={logout}>Logout</button>
-      </nav>
-      <h1>Dashboard</h1>
+      </nav> */}
+
+      <div className="dashboard-header">
+        <h1>Dashboard</h1>
+        <button className="logout" onClick={logout}>Logout</button>
+      </div>
+      
       <div className="stats">
         <div className="stat-card">
           <FaChartBar className="icon" />

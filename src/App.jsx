@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import ProtectedRoute from './components/ProtectedRoute';
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -8,16 +8,18 @@ import Tickets from "./pages/Tickets";
 import Analytics from "./pages/Analytics";
 
 function App() {
-  const [auth, setAuth] = useState(null);
-
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
-      <Route path="/login" element={<Login setAuth={setAuth} />} />
-      <Route path="/signup" element={<Signup setAuth={setAuth} />} />
-      <Route path="/dashboard" element={<Dashboard />} />
-      <Route path="/tickets" element={<Tickets />} />
-      <Route path="/analytics" element={<Analytics />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+
+      
+      <Route element={<ProtectedRoute />}>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/tickets" element={<Tickets />} />
+        <Route path="/analytics" element={<Analytics />} />
+      </Route>
     </Routes>
   );
 }

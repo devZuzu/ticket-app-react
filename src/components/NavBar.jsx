@@ -8,8 +8,8 @@ function NavBar({ setAuth }) {
   const [welcome, setWelcome] = useState('Welcome, Alex');
 
   useEffect(() => {
-    // Simulate fetching user name (replace with real auth data)
-    const user = localStorage.getItem('ticketapp_user') || 'Alex';
+    
+    const user = localStorage.getItem('ticketapp_user') || 'Zulaiha';
     setWelcome(`Welcome, ${user}`);
   }, []);
 

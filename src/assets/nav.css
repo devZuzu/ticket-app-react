@@ -1,0 +1,128 @@
+.nav {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.nav .logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #20c997;
+}
+
+.nav-link.get-started {
+  background: #20c997;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.nav-link.get-started:hover {
+  background: #1aa87a;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.nav-links.open .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-links.open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-links.open .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem;
+  }
+  .nav .logo {
+    font-size: 1.25rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .nav-link {
+    font-size: 0.875rem;
+  }
+  .nav-link.get-started {
+    padding: 0.4rem 1rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1.5rem;
+    border-radius: 0 0 8px 8px;
+    width: 200px;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-link {
+    margin: 0.75rem 0;
+    text-align: right;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .nav-links {
+    width: 150px;
+    right: 0.5rem;
+  }
+  .nav-link {
+    font-size: 0.8rem;
+  }
+}

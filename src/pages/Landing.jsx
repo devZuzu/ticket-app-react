@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import { FaThLarge, FaCode, FaChartBar, FaTwitter, FaWhatsapp, FaFacebookF, FaTiktok } from 'react-icons/fa';
 import '../assets/Landing.css';
+import Nav from '../components/Nav';
+
 
 function Landing() {
   return (
     <div className="container">
+        <Nav />
       <header className="hero">
         <div className="decor-circle decor-circle-large"></div>
         <div className="decor-circle decor-circle-small"></div>
